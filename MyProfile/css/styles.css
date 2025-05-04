@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+
+/* Top section here */
+
+.top-section{
+    color: white;
+}
+
+.header{
+    background-image: url("../images/my_pc1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* adjust opacity here */
+    z-index: 1;
+  }
+
+  .header * {
+    position: relative;
+    z-index: 2; /* Ensures content appears above the overlay */
+  }
+  
+
+.bottom-section{
+    background-color: black;
+    color: white;
+    padding: 50px;
+
+}
+
+.right-navbar ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    font-size: 20px;
+   
+}
+
+.navbar {
+    background-color: rgba(19,22,26, 0.5);
+    padding: 5px;
+    margin-bottom: 100px;
+}
+
+.navbar li{
+    padding: 10px;
+}
+
+.navbar li:hover{
+    background-color:rgba(19,22,26, 0.7) ;
+}
+
+.description{
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.description .quote p{
+    color: white;
+    padding-top: 150px;
+    padding-right: 20px;
+    font-family: "Alfa Slab One";
+    text-transform: uppercase;
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2.5s steps(38)forwards;
+
+}
+
+.description .quote p::after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background: #dadada;
+    right: 0;
+    top: 0;
+    animation: cursorr 1s steps(1, end) 2.5s 1 forwards;;
+}
+
+
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+
+}
+
+@keyframes cursorr{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+  
+
+/* Bootom section */
+
+.about{
+    padding: 30px 20px;
+    
+}
+
+.about p{
+    line-height: 1.5rem;
+    text-align: justify;
+    font-size: 20px;
+}
+
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    line-height: 2.5rem;
+}
+
+.content h4{
+text-transform: uppercase;
+}
+
+.collapse {
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  .collapse:after {
+    content: '\002B'; 
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    font-size: 25px;
+  
+  }
+
+  .active:after {
+    content: "\2212"; 
+  }
+  
+  .active, .collapse:hover {
+    background-color: #555;
+  }
+
+  a,
+  li{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+/* Form */
+
+.form-group{
+    margin: 2rem 0;
+  }
+  
+  .contacts input,
+  .content textarea{
+    border: none;
+    border-bottom: 1px white solid;
+    width: 90%;
+    padding-bottom: 1rem;
+    background-color: black;
+  
+  }
+  
+  .contacts input::placeholder,
+  .contact textarea::placeholder {
+    color: white;
+    opacity: 1;
+  }
+  
+  .contacts input:focus,
+  .contact textarea:focus {
+    outline: none; /* Removes blue border */
+    border-bottom: 1px solid white; /* Keeps your white bottom border */
+    color: white; /* Makes typed text white */
+    
+  }
+  
+  
+  .form-group .btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid;
+    width: 50%;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+    
+  }
+
+  .form-group .btn:hover{
+    background-color: #0056b3;
+    width: 90%;
+ 
+  }
+
+  .visually-hidden{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+  }
